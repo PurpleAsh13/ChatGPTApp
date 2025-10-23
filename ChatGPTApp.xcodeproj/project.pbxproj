@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		11170E712EAA12C7009A65BA /* OpenAISwift in Frameworks */ = {isa = PBXBuildFile; productRef = 11170E702EAA12C7009A65BA /* OpenAISwift */; };
+		11170E742EAA12E8009A65BA /* OpenAISwift in Frameworks */ = {isa = PBXBuildFile; productRef = 11170E732EAA12E8009A65BA /* OpenAISwift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		11170E532EAA11E6009A65BA /* ChatGPTiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatGPTiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11170E632EAA11F7009A65BA /* ChatGPTMacOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatGPTMacOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -29,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11170E712EAA12C7009A65BA /* OpenAISwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -36,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11170E742EAA12E8009A65BA /* OpenAISwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,8 +52,10 @@
 		11170E482EAA114C009A65BA = {
 			isa = PBXGroup;
 			children = (
+				11170E6E2EAA121A009A65BA /* Shared */,
 				11170E552EAA11E6009A65BA /* ChatGPTiOS */,
 				11170E642EAA11F7009A65BA /* ChatGPTMacOS */,
+				11170E722EAA12E8009A65BA /* Frameworks */,
 				11170E542EAA11E6009A65BA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -58,6 +67,20 @@
 				11170E632EAA11F7009A65BA /* ChatGPTMacOS.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		11170E6E2EAA121A009A65BA /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		11170E722EAA12E8009A65BA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -80,6 +103,7 @@
 			);
 			name = ChatGPTiOS;
 			packageProductDependencies = (
+				11170E702EAA12C7009A65BA /* OpenAISwift */,
 			);
 			productName = ChatGPTiOS;
 			productReference = 11170E532EAA11E6009A65BA /* ChatGPTiOS.app */;
@@ -102,6 +126,7 @@
 			);
 			name = ChatGPTMacOS;
 			packageProductDependencies = (
+				11170E732EAA12E8009A65BA /* OpenAISwift */,
 			);
 			productName = ChatGPTMacOS;
 			productReference = 11170E632EAA11F7009A65BA /* ChatGPTMacOS.app */;
@@ -134,6 +159,9 @@
 			);
 			mainGroup = 11170E482EAA114C009A65BA;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				11170E6F2EAA12C7009A65BA /* XCRemoteSwiftPackageReference "OpenAISwift" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 11170E542EAA11E6009A65BA /* Products */;
 			projectDirPath = "";
@@ -558,6 +586,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		11170E6F2EAA12C7009A65BA /* XCRemoteSwiftPackageReference "OpenAISwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/adamrushy/OpenAISwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.4.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		11170E702EAA12C7009A65BA /* OpenAISwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 11170E6F2EAA12C7009A65BA /* XCRemoteSwiftPackageReference "OpenAISwift" */;
+			productName = OpenAISwift;
+		};
+		11170E732EAA12E8009A65BA /* OpenAISwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 11170E6F2EAA12C7009A65BA /* XCRemoteSwiftPackageReference "OpenAISwift" */;
+			productName = OpenAISwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 11170E492EAA114C009A65BA /* Project object */;
 }
